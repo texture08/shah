@@ -25,29 +25,6 @@ function Make_file() {
 }
 
 
-//ゆにこーど
-//エンコード
-function encode() {
-	document.unicode.reset();
-	
-    let Txt = document.getElementById("txt").value;
-
-    const encode = escape(Txt).replace(/%/g, '\\');
-    let Unicode = document.getElementById("unicode");
-    Unicode.innerHTML = encode;
-}
-
-//デコード
-function decode() {
-	document.txt.reset();
-	
-    let Unicode = document.getElementById("unicode").value;
-
-    const encode = unescape(Unicode.replace(/\\/g, '%'));
-    let Text = document.getElementById("txt");
-    Text.innerHTML = encode;
-}
-
 //manifest生成
 function Manifest() {
     let Name = document.getElementById("name").value;
@@ -70,7 +47,15 @@ function Manifest() {
             alert("エラー発生...\n時間を空けてお試しください");
             break;
     }
-    
+    //nameが空白かどうかをチェックズル
+    if(Name == "") {
+        alert("error :\nPack_nameが空白になっています\nPack_nameを入力してください");
+        return false;
+    }
+    else {
+        
+    }
+    //生成するjsonの基本の形
     let Datajson = {
 	"format_version": 2,
 	"header": {
