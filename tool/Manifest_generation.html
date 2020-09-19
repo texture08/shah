@@ -28,8 +28,8 @@
 								<label class="nav-unshown" id="nav-close" for="nav-input"></label>
 								<div id="nav-content">
 										<h3 class="title"><span class="mgr-10">ツール一覧</span></h3>
-										<p class="h"><span class="mgr-10"><a href="./File_generation.html" class="ri-2" >ファイル作る君</a></span></p>
-										<p class="h"><span class="mgr-10"><a href="./Manifest_generation.html" class="ri-2" >Manifest generation</a></span></p>
+										<p class="h"><span class="mgr-10"><a href="./tool/File_generation.html" class="ri-2" >ファイル作る君</a></span></p>
+										<p class="h"><span class="mgr-10"><a href="./tool/Manifest_generation.html" class="ri-2" >Manifest generation</a></span></p>
 										<h3 class="title"><span class="mgr-10">お借りした素材など</span></h3>
 										<p class="h"><span class="mgr-10">使用フォント</span><br><span class="mgr-10"><a href="http://font.sumomo.ne.jp/font_1.html" target="_blank" class="ri">けいふぉんと</a></span></p>
 										<p class="h"><span class="mgr-10">ページトップボタンスタイル</span><br><span class="mgr-10"><a href="https://cotodama.co/pagetop/" target="_blank" class="ri">12番目のやつ</a></span></p>
@@ -61,6 +61,19 @@
 						</select>
 						</p>
 						<p><a class="button" onclick="Manifest()">manifest.jsonを生成</a></p>
+						<div class="hidden_box">
+								<label for="label1">説明を表示</label>
+								<input type="checkbox" id="label1" />
+								<div class="hidden_show">
+										<!--非表示ここから-->
+										<p>このページではマインクラフトbeのmanifest.jsonを生成します
+										<br>名前、説明、パックタイプを選択してボタンを押すと生成できます
+										<br>名前は必ず入れてください
+										<br><span class="mini">説明は入れなくても大丈夫です。名前を入れないとエラーがでます</span>
+										</p>
+										<!--ここまで-->
+								</div>
+						</div>
 				</div>
 		</div>
 		<!--ふっだ-->
