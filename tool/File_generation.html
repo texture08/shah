@@ -9,9 +9,9 @@
 		<link rel="stylesheet" href="../styles/side.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
 		<!--scripts-->
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="../scripts/script.js"></script>
 		<script src="../scripts/generate.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<title>しゃー</title>
 		<!--アイコン-->
 		<link rel="icon" type="image/png" href="../image/icon/favicon.png">
@@ -30,6 +30,7 @@
 										<h3 class="title"><span class="mgr-10">ツール一覧</span></h3>
 										<p class="h"><span class="mgr-10"><a href="./File_generation.html" class="ri-2" >ファイル作る君</a></span></p>
 										<p class="h"><span class="mgr-10"><a href="./Manifest_generation.html" class="ri-2" >Manifest generation</a></span></p>
+										<p class="h"><span class="mgr-10"><a href="./Unicode.html" class="ri-2" >Unicode変換くん</a></span></p>
 										<h3 class="title"><span class="mgr-10">お借りした素材など</span></h3>
 										<p class="h"><span class="mgr-10">使用フォント</span><br><span class="mgr-10"><a href="http://font.sumomo.ne.jp/font_1.html" target="_blank" class="ri">けいふぉんと</a></span></p>
 										<p class="h"><span class="mgr-10">ページトップボタンスタイル</span><br><span class="mgr-10"><a href="https://cotodama.co/pagetop/" target="_blank" class="ri">12番目のやつ</a></span></p>
@@ -56,9 +57,7 @@
 						<p>拡張子名<input type="text" name="extension" id="extension" class="text" placeholder="undefined"></p>
 						<p>内容</p>
 						<p><textarea id="txt" class="text"></textarea></p>
-						<div>
-								<a class="button" onclick="Make_file()">ファイルをを生成</a>
-						</div>
+						<p><a class="button" onclick="Make_file()">ファイルをを生成</a></p>
 						<div class="hidden_box">
 								<label for="label1">説明を表示</label>
 								<input type="checkbox" id="label1" />
