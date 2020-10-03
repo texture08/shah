@@ -1,4 +1,4 @@
-  //ファイル生成
+//ファイル生成
 function SaveToFile(FileName,Stream) {
     
   if (window.navigator.msSaveBlob) {
@@ -13,6 +13,24 @@ function SaveToFile(FileName,Stream) {
     document.body.removeChild(a) //  FireFox specification
   }
 }
+
+//uuid生成
+function Uuid() {
+    let chars = "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".split("");
+    for (let i = 0, len = chars.length; i < len; i++) {
+        switch (chars[i]) {
+            case "x":
+                chars[i] = Math.floor(Math.random() * 16).toString(16);
+                break;
+            case "y":
+                chars[i] = (Math.floor(Math.random() * 4) + 8).toString(16);
+                break;
+        }
+    }
+    return chars.join("");
+}
+
+//-----------------------------------------------------------------------------------------//
 
 //ファイル作るくん
 function Make_file() {
@@ -47,14 +65,20 @@ function Manifest() {
             alert("エラー発生...\n時間を空けてお試しください");
             break;
     }
-    //nameが空白かどうかをチェックズル
+    //nameが空白かどうかをチェックする
     if(Name == "") {
         alert("error :\nPack_nameが空白になっています\nPack_nameを入力してください");
         return false;
+    }else {
     }
-    else {
-        
+
+    //descriptionが空白かどうかをチェックする
+    if(Description == "") {
+        Description = "undefine"
+    }else {
+
     }
+
     //生成するjsonの基本の形
     let Datajson = {
 	"format_version": 2,
@@ -91,18 +115,26 @@ let Stream = Encodejson;
     SaveToFile('manifest.json',Stream);
 }
 
-//uuid生成
-function Uuid() {
-    let chars = "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".split("");
-    for (let i = 0, len = chars.length; i < len; i++) {
-        switch (chars[i]) {
-            case "x":
-                chars[i] = Math.floor(Math.random() * 16).toString(16);
-                break;
-            case "y":
-                chars[i] = (Math.floor(Math.random() * 4) + 8).toString(16);
-                break;
-        }
-    }
-    return chars.join("");
+//ゆにこーど//
+
+//エンコード
+function encode() {
+	document.unicode.reset();
+	
+    let Txt = document.getElementById("txt").value;
+
+    const encode = escape(Txt).replace(/%/g, '\\');
+    let Unicode = document.getElementById("unicode");
+    Unicode.innerHTML = encode;
+}
+
+//デコード
+function decode() {
+	document.txt.reset();
+	
+    let Unicode = document.getElementById("unicode").value;
+
+    const encode = unescape(Unicode.replace(/\\/g, '%'));
+    let Text = document.getElementById("txt");
+    Text.innerHTML = encode;
 }
