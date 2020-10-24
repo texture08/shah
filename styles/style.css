@@ -95,11 +95,6 @@ p {
   background-color: rgb(255, 255, 255);
 }
 
-#ot {
-  width: 518px;
-  height: 260px;
-}
-
 select {
 	-webkit-appearance: none;
 	-moz-appearance: none;
@@ -115,6 +110,28 @@ select {
   border-left: 3px solid rgb(100, 99, 99);
   border-right: 4px solid rgb(100, 99, 99);
   border-bottom: 4px solid rgb(100, 99, 99);
+}
+
+.foo div {
+  margin-left : 10px;
+  display: inline-block;
+}
+
+.link {
+  margin-top: 10px;
+}
+
+.link-2 {
+  margin-left: 70px;
+  background:#ffffff;
+  border: solid 3px rgb(76, 71, 71);
+  color:#7a7878;
+  border-radius: 3px;
+}
+
+.link-3 {
+  margin-top: 10px;
+  margin-left: 10px;
 }
 
 .orange {
