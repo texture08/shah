@@ -3,6 +3,9 @@
 <head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>しゃー</title>
+		<meta name="description" content="クリエイターのためのサイト">
 		<!--styles-->
 		<link rel="stylesheet" href="./styles/style.css">
 		<link rel="stylesheet" href="./styles/button.css">
@@ -11,7 +14,16 @@
 		<!--scripts-->
 		<script src="./scripts/script.js"></script>
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<title>しゃー</title>
+
+		<script>
+		if('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('/scripts/pwa.js').then(function() {
+				console.log('Service Worker Registered')
+			});
+		}
+		</script>
+		<!--data-->
+		<link rel="manifest" href=".scripts/data/manifest.json">
 		<!--アイコン-->
 		<link rel="icon" type="image/png" href="./image/icon/favicon.png">
 		<link rel="shortcut icon" type="image/png" href="./image/icon/favicon.png">
