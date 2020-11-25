@@ -38,6 +38,11 @@ li {
 p {
   margin-left : 10px;
 }
+
+.image {
+  width: 70vw;
+}
+
 .title {
   background-color: #ffffff;
   border: solid 3px #bebebe;
