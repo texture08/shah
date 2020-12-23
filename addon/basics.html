@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>しゃー</title>
+		<meta name="description" content="クリエイターのためのサイト">
+		<!--styles-->
+		<link rel="stylesheet" href="./styles/style.css">
+		<link rel="stylesheet" href="./styles/button.css">
+		<link rel="stylesheet" href="./styles/side.css">
+		<!--scripts-->
+		<script src="./scripts/script.js"></script>
+		<!--アイコン-->
+		<link rel="icon" type="image/png" href="./image/icon/favicon.png">
+		<link rel="shortcut icon" type="image/png" href="./image/icon/favicon.png">
+		<link rel="apple-touch-icon" href="./image/icon/apple-touch-icon.png">
+</head>
+<body>
+		<header>
+				<div class="header">
+						<!--めにゅー-->
+						<div id="nav-drawer">
+								<input id="nav-input" type="checkbox" class="nav-unshown">
+								<label id="nav-open" for="nav-input"><span></span></label>
+								<label class="nav-unshown" id="nav-close" for="nav-input"></label>
+								<div id="nav-content">
+										<h3 class="title"><span class="mgr-10">webアプリ群</span></h3>
+										<p class="h"><span class="mgr-10"><a href="./tools/mine/index.html" class="ri-2" >マイクラのやつ</a></span></p>
+										<p class="h"><span class="mgr-10"><a href="./tools/system/index.html" class="ri-2" >便利そうなやつ</a></span></p>
+										<p class="h"><span class="mgr-10"><a href="./addon/system/index.html" class="ri-2" >アドオンのススメ</a></span></p>
+										<h3 class="title"><span class="mgr-10">お借りした素材など</span></h3>
+										<p class="h"><span class="mgr-10">使用フォント</span><br><span class="mgr-10"><a href="http://font.sumomo.ne.jp/font_1.html" target="_blank" class="ri">けいふぉんと</a></span></p>
+										<p class="h"><span class="mgr-10">ページトップボタンスタイル</span><br><span class="mgr-10"><a href="https://cotodama.co/pagetop/" target="_blank" class="ri">12番目のやつ</a></span></p>
+										<h3><span class="mgr-10"><a href="https://twitter.com/H2DH4K?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">フォローする By H2DH4K</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></span></p>
+								</div>
+						</div>
+						<!--へっだ-->
+						<div class="header-log">しゃー</div>
+						<div id="hedaer-list">
+								<ul>
+										<li><a class="ri-3" href="./index.html">ホーム</a></li>
+										<li><a class="ri-3" href="https://twitter.com/H2DDH">開発者</a></li>
+										<a>使ってくれてありがとう！</a>
+								</ul>
+						</div>
+				</div>
+		</header>
+		<!--本文-->
+		<div class="mine">
+				<div>
+						<h1 class="title"><span class="mgr-10">アドオンの基礎の「き」</span></h1>
+						<p>こんにちは。シューでございます
+						<br>今回はタイトルにもあるように、アドオンの基礎の「き」の字について書いていきます
+						<br>基礎について書くのでアイテムの追加だとかは解説しないです
+						<br>ちなみにですが、所々各自で調べてもらって欲しいものもありますのでその時は自分で頑張ってください
+						<br>自分で調べることというのはなんにでも役に立つからです
+						</p>
+						<h2 class="h">アドオンとは？</h2>
+						<p>そもそもの話、アドオンって何か分かってますか？
+						<br>分かっている人は飛ばしてもらってかまいません
+						<br>では考えてみましょう。アドオンってなんですか？
+						<br>よく見るのはアイテム、ブロック、entityなどの追加ですよね
+						<br>確かにそれもアドオンですが、アドオンとは<a class="orange">ビヘイビアパックやリソースパックをまとめて</a>アドオンと呼びます
+						<br>ビヘイビアパックとは基本的にはentityの元であるAIやアイテムの基礎の構文だったりとデータを管理します
+						<br>リソースパックはアニメーションやテクスチャ、geometry<a class="mini">model関連ですね</a>、など描画に関することを管理します
+						<br>ちょっと前まで使えていたshaderもリソースパックで管理していました
+						<br>と、まぁ大雑把に書きましたが分かってでしょうか？
+						</p>
+						<h2 class="h">JSONを理解しよう</h2>
+						<p>アドオンについて分かったところで早速！と行きたいところですがそれはまだ先です
+						<br>マイクラ統合版<a class="mini">以後beと呼びます</a>のアドオンではjsonという言語を用いて作成します
+						<br>プログラミング言語の一種というのでしょうかね？とりあえず今はそれだけでいいです
+						<br>ちなみにですが、jsonを理解したところでアドオンは作れないです
+						<br>jsonはただのベースなので
+						<br>さて、jsonについて理解することはアドオンを作るのに必要ですが難しそうですよね
+						<br>実はそうでもないです
+						<br>ある一定の法則があるのでそれさえ守ってしまえば誰でもjsonは書けてしまいます
+						<br>jsonについてだらだら話してもあれなので<a href="https://9469293183.amebaownd.com/posts/8620323">こちら</a>の分かりやすい記事をご覧ください
+						<br>アドオンのjsonに触れつつ解説をしているのでアドオンを作る人向けにはかなり分かりやすいです
+						<br><br>と、言ったものの私の記事も基礎の解説ですから軽く解説したいと思います
+						<br>以下の例文を見てください<a class="mini">見にくくてすみません。右下を引っ張って大きくしてください</a>
+						<br><pre><code><textarea readonly>
+{
+	"名前": "シュー",
+		"好きなこと": {
+			"ゲーム": [
+				"原神",
+				"マイクラ",
+				"パズドラ"
+			],
+			"食べること": "シュークリーム"
+		}
+	"年": 14
+}
+						</textarea></code></pre>
+						<br>ぱっと見でも大丈夫ですが、何か気づくことはありませんか？
+						<br>それぞれ対応する<a class="orange">{}</a>や<a class="orange">[]</a>で囲んであったり、数字以外のところは<a class="green">""</a>で囲んであったりします
+						<br>実はこれがとても大事になってきます
+						<br>jsonはそれぞれ対応するカッコだったり半角全角英数字の場合は"を使って囲む必要があります<a class="mini">trueやfalseは例外です</a>
+						<br>{}とか[]の意味は先ほどあげた記事だったり各自調べてみてくださいね
+						<br>なんだ。簡単じゃん
+						</p>
+						<h2 class="h">アドオンを作る準備</h2>
+						<p>さぁついにアドオンを作って行きたいと思います
+						<br>ですがその前に色々と準備をしちゃいます<a class="mini">アドオンを作るまでの道のりは長い...</a>
+						<br>準備、それとはいくつかソフトをDownloadしてほしいと思います
+						<br>主に必要な物はこちらです
+						<br>pcならテキストエディタだけ用意してもらえれば大丈夫です
+						<br>モバイル系ならテキストエディタに加えファイルマネージャーを用意するといいです<a class="mini">基本的にテキストエディタはメモ帳でもいいです</a>
+						<br>それぞれ好きなものを使えばいいと思いますが、pcだと<a href="https://azure.microsoft.com/ja-jp/products/visual-studio-code/">vscode</a>がおすすめです
+						<br>iosはよくわからないのでパスしますがandroidなら<a href="https://play.google.com/store/apps/details?id=com.rhmsoft.edit&hl=ja">QuickEdit</a>というエディタが使いやすいです
+						<br>ファイルマネージャーはファイル・フォルダの作成、名前の変更、移動・コピー、zip解凍・zip圧縮などなどできればいいです
+						<br>あと必要なものはドット絵を描くことができるペイントソフトですね
+						<br>有名で私も愛用してるメディバンというのがあります。とても使いやすいのでおすすめです
+						<br>もちろん好きなもので大丈夫です
+						</p>
+						<h2 class="h">ついに書き始めよう！</h2>
+						<p>さぁてついに書いていきます
+						<br>まずは<a href="https://www.minecraft.net/ja-jp/addons">こちら</a>のサイトにアクセスして、下にスクロースしてください
+						<br>緑の文字のbehavior packsを押してDLして解凍しといてください
+						<br><br>今回はまず手始めに書き換えしていきます
+						<br>いきなり追加してもいいですが、書き換えから始めた方が理解が深まると思います
+						<br>では解凍したら次のように進んでください<a class="orange">Vanilla_Behavior_Pack_(version)/entities</a>
+						<br>ここに入ってるファイルをいじります
+						<br>その前にパックを作ります
+						<br>適当な名前でフォルダを作ります
+						<br>そしたら<a href="https://texture08.github.io/shah/tools/mine/Manifest_generation.html">私のサイト</a>でmanifestを生成します
+						<br>manifestに関しては「マイクラ manifest」みたいな感じで検索してみてください
+						<br>はい、そしたらpack_typeをdataにしてmanifest.jsonを生成を押して、さっき作ったフォルダの中に生成したmanifestを移動してください
+						<br>そしたらそのフォルダの中にentitiesというフォルダを作ります
+						<br>これで準備は完了です
+						<br>先ほどのバニラファイルからskeleton.jsonをコピーして自分で作ったentitiesに入れてください
+						<br>そしたらお使いのテキストエディタで開きましょう
+						<br><br>ではスケルトンの歩くスピードを変えてみます
+						<br><a class="green">"components"</a>の中に以下のコードがあるので探しましょう
+						<br><pre><code><textarea readonly>
+"minecraft:movement": {
+		"value": 0.25
+},
+						</textarea></code></pre>
+						<br>こちらは歩くことができるentityの移動速度をいじるためのパラメータです
+						<br><a class="orange">"value"</a>の値を小さくすると遅く、大きくすると早くなります
+						<br>1とかにしてみてください
+						<br><br>書き換えられたら適用します
+						<br>まずはmanifestやentitiesがある層にいき、すべて選択し、zip圧縮します
+						<br>そしたら拡張子を.zipから<a class="orange">.mcpack</a>に変更してダブルクリックいつものようにワールドに適用してください
+						<br>何も間違っていなければスケルトンを出すと足が早くなっているのが分かります
+						</p>
+						<h2 class="h">終わりに</h2>
+						<p>字が多くて見にくかったりしましたよねすみません
+						<br>それは置いといて、アドオンは基礎を分かっていればスムーズに進められます
+						<br>ぜひ基礎を理解してみてください
+						<br>何かあればTwitterのDMまでお願いします
+						<br><br>ちなみに今回作ったスケルトンは配布しておくのでDLして参考にしてもらってかまいません
+						<br><a class="button" href="./data/skeleton.mcpack" download="data/skeleton.mcpack">Download</a>
+						</p>
+		</div>
+		<!--ふっだ-->
+		<div class="footer">
+				<p>しゃー<br> お問い合わせ
+				</p>
+				<p><a href="https://twitter.comH2DDH" target="_blank" class="ri">Twitter</a> ID:H2DDH<br>
+						<a href="https://discord.gg/tk6bJaG" target="_blank" class="ri">Discord</a> ID:シュー#8493<br>
+						<span class="mini">&copy; 2020〜</span></p>
+		</div>
+</body>
+</html>

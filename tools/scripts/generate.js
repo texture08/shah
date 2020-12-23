@@ -1,37 +1,3 @@
-//ファイル生成
-function SaveToFile(FileName,Stream) {
-    
-  if (window.navigator.msSaveBlob) {
-    window.navigator.msSaveBlob(new Blob([Stream], { type: "text/plain" }), FileName);
-  } else {
-    var a = document.createElement("a");
-    a.href = URL.createObjectURL(new Blob([Stream], { type: "text/plain" }));
-    //a.target   = '_blank';
-    a.download = FileName;
-    document.body.appendChild(a) //  FireFox specification
-    a.click();
-    document.body.removeChild(a) //  FireFox specification
-  }
-}
-
-//uuid生成
-function Uuid() {
-    let chars = "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".split("");
-    for (let i = 0, len = chars.length; i < len; i++) {
-        switch (chars[i]) {
-            case "x":
-                chars[i] = Math.floor(Math.random() * 16).toString(16);
-                break;
-            case "y":
-                chars[i] = (Math.floor(Math.random() * 4) + 8).toString(16);
-                break;
-        }
-    }
-    return chars.join("");
-}
-
-//-----------------------------------------------------------------------------------------//
-
 //ファイル作るくん
 function Make_file() {
     let Name = document.getElementById("name").value;
@@ -115,8 +81,7 @@ let Stream = Encodejson;
     SaveToFile('manifest.json',Stream);
 }
 
-//ゆにこーど//
-
+////////////ゆにこーど////////////
 //エンコード
 function encode() {
 	document.unicode.reset();
@@ -137,4 +102,35 @@ function decode() {
     const encode = unescape(Unicode.replace(/\\/g, '%'));
     let Text = document.getElementById("txt");
     Text.innerHTML = encode;
+}
+
+//pack.mcmetaの生成
+function pack_meta() {
+    let Format = document.getElementById("format").value;
+    let Description = document.getElementById("description").value;
+    
+    //nameが空白かどうかをチェックする
+    if(Format == "") {
+        alert("error :\nPack_Formatが空白になっています\nPack_Formatを入力してください");
+        return false;
+    }else {　//そうでなかった場合は数値に変換
+        Format = parseFloat(Format);
+    }
+
+    //descriptionが空白かどうかをチェックする
+    if(Description == "") {
+        Description = "undefine";
+    }else {
+    }
+
+    //生成するjsonの基本の形
+    let Datajson = {
+        "pack": {
+          "pack_format": Format,
+          "description": Description
+        }
+      };
+let Encodejson = JSON.stringify(Datajson, null , 2);
+let Stream = Encodejson;
+    SaveToFile('pack.mcmeta',Stream);
 }

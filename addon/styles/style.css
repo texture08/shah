@@ -1,0 +1,147 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: keifont;
+    src: url(font/keifont.ttf);
+}
+
+body {
+  font-family: keifont;
+}
+
+header {
+  padding:10px;
+  background: #bebebe;/* 背景色 */
+  height: 90px;
+  border: solid 4px rgb(76, 71, 71);/* 横のやつ */
+  border-radius: 3px;
+}
+.header-log {
+  position: relative;
+  bottom: 25px;
+  left: 35px;
+}
+#hedaer-list ul li {
+  display: inline;
+}
+#hedaer-list ul{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+li {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+p {
+  margin-left : 10px;
+}
+
+.image {
+  width: 70vw;
+}
+
+.title {
+  background-color: #ffffff;
+  border: solid 3px #bebebe;
+  border-radius: 8px;
+}
+.h{
+  border-left: solid 6px #bebebe;
+  border-radius: 2px;
+}
+.mgr-10{
+  margin-left : 10px;
+}
+.mini {
+  font-size: 12px;
+  color: #979797;
+}
+.footer{
+  background-color:#bebebe;/* 背景色 */
+  border: solid 4px rgb(76, 71, 71);/* 横のやつ */
+  border-radius: 3px;
+}
+.ri{
+  color:#9c0000;
+}
+.ri-2{
+  color:#c5c2c2;
+}
+.ri-3{
+  background:#ffffff;
+  border: solid 3px rgb(76, 71, 71);
+  color:#7a7878;
+  border-radius: 3px;
+}
+
+.text{
+  border-radius: 6px;
+  border-top: 3px solid rgb(100, 99, 99);
+  border-left: 3px solid rgb(100, 99, 99);
+  border-right: 4px solid rgb(100, 99, 99);
+  border-bottom: 4px solid rgb(100, 99, 99);
+  background-color: rgb(255, 255, 255);
+}
+
+.text-box_2 {
+  height: 15px;
+  width: 15px;
+  margin-left: 10px;
+  padding: 5px 8px;
+  border-radius: 6px;
+  border-top: 3px solid rgb(100, 99, 99);
+  border-left: 3px solid rgb(100, 99, 99);
+  border-right: 4px solid rgb(100, 99, 99);
+  border-bottom: 4px solid rgb(100, 99, 99);
+  background-color: rgb(255, 255, 255);
+}
+
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	margin-bottom: 20px;
+	padding: 7px 10px 7px 10px;
+	font-size: 93%;
+	line-height: 1.1em;
+	border-radius: 5px;
+	border: none;
+  background-color: #ffffff;
+  border-top: 3px solid rgb(100, 99, 99);
+  border-left: 3px solid rgb(100, 99, 99);
+  border-right: 4px solid rgb(100, 99, 99);
+  border-bottom: 4px solid rgb(100, 99, 99);
+}
+
+.foo div {
+  margin-left : 10px;
+  display: inline-block;
+}
+
+.link {
+  margin-top: 10px;
+}
+
+.link-2 {
+  margin-left: 70px;
+  background:#ffffff;
+  border: solid 3px rgb(76, 71, 71);
+  color:#7a7878;
+  border-radius: 3px;
+}
+
+.link-3 {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.orange {
+	color: #df7800;
+}
+
+.green {
+	color: #5EFF66;
+}

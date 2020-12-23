@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!--styles-->
+		<link rel="stylesheet" href="../styles/style.css">
+		<link rel="stylesheet" href="../styles/button.css">
+		<link rel="stylesheet" href="../styles/side.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+		<!--scripts-->
+		<script src="../scripts/json_format.js"></script>
+		<script src="../scripts/file.js"></script>
+		<script src="../scripts/generate.js"></script>
+		<title>しゃー</title>
+		<!--アイコン-->
+		<link rel="icon" type="image/png" href="../image/icon/favicon.png">
+		<link rel="shortcut icon" type="image/png" href="../image/icon/favicon.png">
+		<link rel="apple-touch-icon" href="../image/icon/apple-touch-icon.png">
+</head>
+<body>
+		<header>
+				<div class="header">
+						<!--めにゅー-->
+						<div id="nav-drawer">
+								<input id="nav-input" type="checkbox" class="nav-unshown">
+								<label id="nav-open" for="nav-input"><span></span></label>
+								<label class="nav-unshown" id="nav-close" for="nav-input"></label>
+								<div id="nav-content">
+										<h3 class="title"><span class="mgr-10">ツール一覧</span></h3>
+										<p class="h"><span class="mgr-10"><a href="./tool/File_generation.html" class="ri-2" >ファイル作る君</a></span></p>
+										<p class="h"><span class="mgr-10"><a href="./tool/Manifest_generation.html" class="ri-2" >Manifest generation</a></span></p>
+										<h3 class="title"><span class="mgr-10">お借りした素材など</span></h3>
+										<p class="h"><span class="mgr-10">使用フォント</span><br><span class="mgr-10"><a href="http://font.sumomo.ne.jp/font_1.html" target="_blank" class="ri">けいふぉんと</a></span></p>
+										<p class="h"><span class="mgr-10">ページトップボタンスタイル</span><br><span class="mgr-10"><a href="https://cotodama.co/pagetop/" target="_blank" class="ri">12番目のやつ</a></span></p>
+								</div>
+						</div>
+						<!--へっだ-->
+						<div class="header-log">しゃー</div>
+						<div id="hedaer-list">
+								<ul>
+										<li><a class="ri-3" href="../help.html">ヘルプ</a></li>
+										<li><a class="ri-3" href="https://twitter.com/H2DDH">開発者</a></li>
+										<a>使ってくれてありがとう！</a>
+								</ul>
+						</div>
+				</div>
+		</header>
+		<!--ページトップボタン-->
+		<div id="page_top"><a href="#"></a></div>
+		<!--本文-->
+		<div class="mine">
+				<div>
+						<h3 class="ri-3">Json Format</h3>
+						<input type="file" onchange="fileChanged(this)">
+						<pre id="pre1"></pre>
+						<p><a class="button" onclick="Foo()">ファイルをを生成</a></p>
+						<div class="hidden_box">
+								<label for="label1">説明を表示</label>
+								<input type="checkbox" id="label1" />
+								<div class="hidden_show">
+										<!--非表示ここから-->
+										<p>jsoファイルを成型し、成型したjsonファイルを生成します
+										<br>コメントアウトがある場合はエラーが出てしまいます
+										</p>
+										<!--ここまで-->
+								</div>
+						</div>
+				</div>
+		</div>
+		<!--ふっだ-->
+		<div class="footer">
+				<p>しゃー<br> お問い合わせ
+				</p>
+				<p><a href="https://twitter.comH2DDH" target="_blank" class="ri">Twitter</a> ID:H2DDH<br>
+						<a href="https://discord.gg/tk6bJaG" target="_blank" class="ri">Discord</a> ID:シュー#8493<br>
+						<span class="mini">&copy; 2020〜</span></p>
+		</div>
+</body>
+</html>

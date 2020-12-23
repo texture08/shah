@@ -1,0 +1,17 @@
+{
+    "name": "しゃー",
+    "short_name": "しゃー",
+    "description": "クリエイターのためのサイト",
+    "start_url": "https://texture08.github.io/shah/",
+    "display": "standalone",
+    "orientation": "protail",
+    "background_color": "#000000",
+    "theme_color": "#ffffff",
+    "icons": [
+        {
+            "src": "/image/icon/favicon.png",
+            "sizes": "768x768",
+            "type": "image/png"
+        }
+    ]
+}
