@@ -80,21 +80,8 @@
 						<br>jsonについてだらだら話してもあれなので<a href="https://9469293183.amebaownd.com/posts/8620323">こちら</a>の分かりやすい記事をご覧ください
 						<br>アドオンのjsonに触れつつ解説をしているのでアドオンを作る人向けにはかなり分かりやすいです
 						<br><br>と、言ったものの私の記事も基礎の解説ですから軽く解説したいと思います
-						<br>以下の例文を見てください<a class="mini">見にくくてすみません。右下を引っ張って大きくしてください</a>
-						<br><pre><code><textarea readonly>
-{
-	"名前": "シュー",
-		"好きなこと": {
-			"ゲーム": [
-				"原神",
-				"マイクラ",
-				"パズドラ"
-			],
-			"食べること": "シュークリーム"
-		}
-	"年": 14
-}
-						</textarea></code></pre>
+						<br>以下の例文を見てください
+						<script src="https://gist.github.com/texture08/0c612a6c8ddb8a4628970531d44fc36d.js"></script>
 						<br>ぱっと見でも大丈夫ですが、何か気づくことはありませんか？
 						<br>それぞれ対応する<a class="orange">{}</a>や<a class="orange">[]</a>で囲んであったり、数字以外のところは<a class="green">""</a>で囲んであったりします
 						<br>実はこれがとても大事になってきます
@@ -135,11 +122,7 @@
 						<br>そしたらお使いのテキストエディタで開きましょう
 						<br><br>ではスケルトンの歩くスピードを変えてみます
 						<br><a class="green">"components"</a>の中に以下のコードがあるので探しましょう
-						<br><pre><code><textarea readonly>
-"minecraft:movement": {
-		"value": 0.25
-},
-						</textarea></code></pre>
+						<br><script src="https://gist.github.com/texture08/b45c38ce7f5c1f4a59936adbb8dafbdb.js"></script>
 						<br>こちらは歩くことができるentityの移動速度をいじるためのパラメータです
 						<br><a class="orange">"value"</a>の値を小さくすると遅く、大きくすると早くなります
 						<br>1とかにしてみてください
