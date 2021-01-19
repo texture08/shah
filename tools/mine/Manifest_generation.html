@@ -43,7 +43,7 @@
 						<div class="header-log">しゃー</div>
 						<div id="hedaer-list">
 							<ul>
-									<li><a class="ri-3" href="https://texture08.github.io/shah/">ホーム</a></li>
+									<li><a class="ri-3" href="https://shah-two.vercel.app/">ホーム</a></li>
 									<li><a class="ri-3" href="https://twitter.com/H2DH4K">開発者</a></li>
 									<a>使ってくれてありがとう！</a>
 							</ul>
@@ -56,12 +56,16 @@
 		<div class="mine">
 				<div>
 						<h1 class="title"><span class="mgr-10">Manifest generation</span></h1>
-						<p>Pack_name<span class="mgr-10"><input type="text" id="name" class="text" placeholder="undefined"></span></p>
+						<p>Format version<span class="mgr-10"><input type="text" id="fv" class="text-box_2" placeholder="2"></span></p>
+						<p>Pack name<span class="mgr-10"><input type="text" id="name" class="text" placeholder="undefined"></span></p>
 						<p>Description<span class="mgr-10"><input type="text" id="description" class="text" placeholder="undefined"></span></p>
-						<p>Pack_type
+						<p>Version<span class="mgr-10"><input type="text" id="v-1" class="text-box_2" placeholder="1"><input type="text" id="v-2" class="text-box_2" placeholder="0"><input type="text" id="v-3" class="text-box_2" placeholder="0"></span></p>
+						<p>Min engine version<span class="mgr-10"><input type="text" id="mv-1" class="text-box_2" placeholder="1"><input type="text" id="mv-2" class="text-box_2" placeholder="0"><input type="text" id="mv-3" class="text-box_2" placeholder="0"></span></p>
+						<p>Pack type
 						<select id="type">
 							<option value="r">Resources</option>
 							<option value="b">Data</option>
+							<option value="w">World_template</option>
 						</select>
 						</p>
 						<p><a class="button" onclick="Manifest()">manifest.jsonを生成</a></p>
@@ -73,6 +77,7 @@
 										<p>このページではマインクラフトbeのmanifest.jsonを生成します
 										<br>名前、説明、パックタイプを選択してボタンを押すと生成できます
 										<br>名前は必ず入れてください
+										<br>Format versionは基本的に入れなくて大丈夫ですが、ワールドテンプレートの場合は1にしてください
 										<br><span class="mini">説明は入れなくても大丈夫です。名前を入れないとエラーがでます</span>
 										</p>
 										<!--ここまで-->
