@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>しゃー</title>
+		<meta name="description" content="クリエイターのためのサイト">
+		<!--styles-->
+		<link rel="stylesheet" href="./styles/style.css">
+		<link rel="stylesheet" href="./styles/button.css">
+		<link rel="stylesheet" href="./styles/side.css">
+		<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+		<!--scripts-->
+		<script src="./scripts/script.js"></script>
+		<!--アイコン-->
+		<link rel="icon" type="image/png" href="./image/icon/favicon.png">
+		<link rel="shortcut icon" type="image/png" href="./image/icon/favicon.png">
+		<link rel="apple-touch-icon" href="./image/icon/apple-touch-icon.png">
+</head>
+<body>
+		<header>
+				<div class="header">
+						<!--めにゅー-->
+						<div id="nav-drawer">
+								<input id="nav-input" type="checkbox" class="nav-unshown">
+								<label id="nav-open" for="nav-input"><span></span></label>
+								<label class="nav-unshown" id="nav-close" for="nav-input"></label>
+								<div id="nav-content">
+										<h3 class="title"><span class="mgr-10">webアプリ群</span></h3>
+										<p class="h"><span class="mgr-10"><a href="./tools/mine/index.html" class="ri-2" >マイクラのやつ</a></span></p>
+										<p class="h"><span class="mgr-10"><a href="./tools/system/index.html" class="ri-2" >便利そうなやつ</a></span></p>
+										<p class="h"><span class="mgr-10"><a href="./addon/index.html" class="ri-2" >アドオンのススメ</a></span></p>
+										<h3 class="title"><span class="mgr-10">お借りした素材など</span></h3>
+										<p class="h"><span class="mgr-10">使用フォント</span><br><span class="mgr-10"><a href="http://font.sumomo.ne.jp/font_1.html" target="_blank" class="ri">けいふぉんと</a></span></p>
+										<p class="h"><span class="mgr-10">アイコン</span><br><span class="mgr-10"><a href="https://fontawesome.com/?from=io" target="_blank" class="ri">FontAwesome</a></span></p>
+										<h3><span class="mgr-10"><a href="https://twitter.com/H2DH4K?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">フォローする By H2DH4K</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></span></p>
+								</div>
+						</div>
+						<!--へっだ-->
+						<div class="header-log">しゃー</div>
+						<div id="hedaer-list">
+								<ul>
+										<li class="li"><a class="ri-3" href="https://texture08.github.io/shah/">ホーム</a></li>
+										<li class="li"><a class="ri-3" href="https://twitter.com/H2DH4K">開発者</a></li>
+										<a>使ってくれてありがとう！</a>
+								</ul>
+						</div>
+				</div>
+		</header>
+		<!--本文-->
+		<div class="mine">
+				<div>
+					<img src="./image/icon/icon2.png" class="image">
+					<h1 class="title"><span class="mgr-10">コマンドをまとめよう！functionの作り方！！</span></h1>
+					<p>こんにちはシューです
+					<br>今回はfunctionについてです
+					<br>これは知ってる人結構いると思いますが始めたばかリだよ！って人もいるので解説します
+					<br>わからないところがあればぜひ<a href="https://twitter.com/H2DH4K">Twitter</a>のDMまで来てください
+					</p>
+					<h2 class="h">functionって何？</h2>
+					<p>functionは何か？疑問に思う方もいると思います
+					<br>functionは英語で<a class="orange">関数</a>という意味です<a class="mini">覚えなくても大丈夫ですが知ってると便利だと思います</a>
+					<br>見たことがある人いると思いますが、beとje、共に<a class="green">functionコマンド</a>というものを見たことがあると思います
+					<br>functionはこのコマンドで実行するものになります
+					<br><br>ではこのコマンドで何ができるか？
+					<br>それは「複数のコマンドを一度にたくさん実行ができる」というものになっています
+					<br>例えばコマブロをおいてチェーンでgiveしていたアイテムたちもこのfunctionを使えば一つのコマンドで済みます
+					<br>最初は大量のコマンドを書く必要がありますが、間違えて壊しても一つで済むので便利ですよね
+					</p>
+					<h2 class="h">実際に作ってみよう！</h2>
+					<p>実際にどういうものか分かったと思うので作っていきます
+					<br>functionを作るにはビヘイビアを使います
+					<br>sampleとして配布するので参考にしてもらってかまいません
+					<br>ファイル構成は以下の通りです
+					</p>
+					<div class="file">
+						<ul>
+						  <li><i class="fas fa-folder"></i><a class="mgr-10">ビヘイビアパック</a>
+							<ul>
+							  <li><i class="fas fa-folder"></i><a class="mgr-10">functions</a>
+								<ul>
+								  <li><i class="fas fa-file-alt"></i><a class="mgr-10">test1.mcfunction</a></li>
+								  <li><i class="fas fa-file-alt"></i><a class="mgr-10">test2.mcfunction</a></li>
+								</ul>
+							　</li>
+							  	<li><i class="fas fa-file-alt"></i><a class="mgr-10">manifest.json</a></li>
+							</ul>
+						  </li>
+						</ul>
+					</div>
+					<p>manifestの中身は省略しますが<a class="mini">pack_typeはdataです</a>、functionsの中のtestn.mcfunction<a class="mini">nは数が入ります</a>は以下の通りです
+					<br>test1.mcfunction
+					<br><script src="https://gist.github.com/texture08/5776e49d9bcf7d3ee1d522a2f46afd96.js"></script>
+					<br>test2.mcfunction
+					<br><script src="https://gist.github.com/texture08/868972c41ec1cd88ba068cf49104479c.js"></script>
+					<br>実際の動作は下の動画の通りです
+					<br><a class="mgr-10"><iframe width="560" height="315" src="https://www.youtube.com/embed/c2KmFzbeMMI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
+					<br>コマンドの中身は解説しませんがこのような感じになります
+					<br><br>functionを書くときは<a class="orange">/</a>を付けづに書く必要があります
+					<br>拡張子は<a class="orange">mcfunction</a>になります
+					<br>間違えないようにしてください
+					<br>#を先頭につけるとコメントアウトというものになって
+					<br>ちょくせつコマンドに干渉しなくなります
+					<br>なのでメモするときなどに使うと便利ですね
+					</p>
+					<h2 class="h">functionが使えない！</h2>
+					<p>functionが使えなくて嘆いてる人をたまに見ますのでそういう時は以下のことを確認してほしいです
+					<ul>
+						<li>コマンドに/を付けている</li>
+						<li>コマンドに構文エラーがある</li>
+						<li>manifest.jsonのpack_typeがdataになっていない</li>
+						<li>functionsのフォルダのfunctionにsがついていない</li>
+						<li>ファイル構成が間違っている</li>
+						<li>ビヘイビアパックを適用していない</li>
+						<li>拡張子がmcfunctionになっていない</li>
+					</ul>
+					<br>このことをすべて確認した上でできない場合は誰かに聞くなりするといいと思います
+					<br>私もできる限り対応するようにしますので聞いてみてください
+					</p>
+					<h2 class="h">終わりに</h2>
+					<p>いかがでしたか？
+					<br>やっぱり記事だと文字が多くなってしまいますね
+					<br>まぁfunctionは便利ですし配布も簡単なのでおすすめです
+					<br>ただ条件付きどうのこうのができないのでそこは残念ですね
+					<br><br>今回のsampleはしたからDLできます
+					<br><a class="button" href="./data/function_test.mcpack" download="data/function_test.mcpack">Download</a>
+					</p>
+		</div>
+		<!--ふっだ-->
+		<div class="footer">
+				<p>しゃー<br> お問い合わせ
+				</p>
+				<p><a href="https://twitter.com/H2DH4K" target="_blank" class="ri">Twitter</a> ID:H2DH4K<br>
+						<a href="https://discord.gg/tk6bJaG" target="_blank" class="ri">Discord</a> ID:シュー#8493<br>
+						<span class="mini">&copy; 2020〜</span></p>
+		</div>
+</body>
+</html>

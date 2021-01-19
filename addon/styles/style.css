@@ -9,6 +9,7 @@ body {
   font-family: keifont;
 }
 
+/*へっだ*/
 header {
   padding:10px;
   background: #bebebe;/* 背景色 */
@@ -29,18 +30,57 @@ header {
   margin-bottom: 0px;
 }
 
-li {
+/*ファイル構造*/
+.file ul li ul {
+  list-style: none;
+  margin-top: .5em;
+  margin-bottom: .75em;
+}
+ 
+.file ul li ul li {
+  position: relative;
+}
+ 
+.file ul li ul li::before {
+  content: "";
+  position: absolute;
+  top: -0.5em;
+  left: -16px;
+  height: calc(100% + .75em);
+  border-left: 3px solid #a5a5a5;
+}
+ 
+.file ul li ul li:last-child::before {
+  height: calc(1em + .25em);
+}
+ 
+.file ul li ul li::after {
+  content: "";
+  position: absolute;
+  top: .75em;
+  left: -16px;
+  width: 10px;
+  border-bottom: 3px solid #a5a5a5;
+}
+
+.li {
     display: flex;
     justify-content: space-around;
     list-style: none;
 }
 
 p {
-  margin-left : 10px;
+  margin-left: 10px;
 }
 
 .image {
-  width: 70vw;
+  width: 50vw;
+  margin-top: 10px;
+}
+
+.image2 {
+  width: 20vw;
+  margin-top: 10px;
 }
 
 .title {
