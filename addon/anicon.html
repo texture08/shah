@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>しゃー</title>
+		<meta name="description" content="クリエイターのためのサイト">
+		<!--styles-->
+		<link rel="stylesheet" href="./styles/style.css">
+		<link rel="stylesheet" href="./styles/button.css">
+		<link rel="stylesheet" href="./styles/side.css">
+		<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+		<!--scripts-->
+		<script src="./scripts/script.js"></script>
+		<!--アイコン-->
+		<link rel="icon" type="image/png" href="./image/icon/favicon.png">
+		<link rel="shortcut icon" type="image/png" href="./image/icon/favicon.png">
+		<link rel="apple-touch-icon" href="./image/icon/apple-touch-icon.png">
+</head>
+<body>
+	<script type="text/javascript" src="https://texture08.github.io/js/header.js"></script>
+		<!--本文-->
+		<div class="mine">
+				<div>
+						<h1 class="title"><span class="mgr-10">使えば便利！アニメーションコントローラーの使い方！（ビヘイビア）</span></h1>
+						<p>こんにちはシューです
+						<br>こんかいは「アニメーションコントローラー」略して「アニコン」というものについてです
+						<br>このアニコンはデフォルトではリソースの方に標準で入っていますが、ビヘイビアに作るとなんと使うことができます<span class="mini">書き方は多少異なります</span>
+						<br>これは何ができるかといいますと、entityから直接コマンドが実行できます
+						<br>例えばクリーパーを召喚したときにtntも召喚するなどもできます
+						<br>プレイヤーに紐づけるとよく見るシフト感知やクリック感知もできます
+						<br>とっても便利ですよね
+						<br>ちなみにアニコンは一つのファイルにすべて書いてしまっても問題ないです
+						</p>
+						<h2 class="h">サンプル</h2>
+						<p>ではみんな大好きなサンプルを書いたので置いときます
+						<br>例によってサンプルファイルとして配布するので気になる人はDownloadしてください
+						<br>ではファイル構成は以下の通り
+						</p>
+						<div class="file">
+							<ul>
+							  <li><i class="fas fa-folder"></i><a class="mgr-10">ビヘイビアパック</a>
+								<ul>
+								  	<li><i class="fas fa-folder"></i><a class="mgr-10">animation_controllers</a>
+										<ul>
+										  <li><i class="fas fa-file-alt"></i><a class="mgr-10">test.json</a></li>
+										</ul>
+									</li>
+									<li><i class="fas fa-folder"></i><a class="mgr-10">entities</a>
+										<ul>
+										  <li><i class="fas fa-file-alt"></i><a class="mgr-10">player.json</a></li>
+										</ul>
+									</li>
+									  <li><i class="fas fa-file-alt"></i><a class="mgr-10">manifest.json</a></li>
+								</ul>
+							  </li>
+							</ul>
+						</div>
+						<p>いつものようにmanifest.jsonに関しては省略します<span class="mini">質問があれば記事にして出します</span>
+						<br>中身は以下の通り
+						<br>test.json
+						<br><script src="https://gist.github.com/texture08/ccaccbc2aeb9dfec5d32e1295781a8c9.js"></script>
+						<br>player.json
+						<br><script src="https://gist.github.com/texture08/5114022aeb1ab04d9841c38c2200ea9b.js"></script>
+						<br>コマンド自体は解説しません
+						<br>ちゃんと動作確認をしていないのでもしかしたら凡ミスで動かないかもしれないです
+						<br><br>では解説します
+						<br>アニコンから説明します
+						<br>このアニコン自体はシフトをしたらタグsneakingを付け、離したら消す
+						<br>画面をタップまたは左クリックをしたらタグattackを付け、終わったら消す
+						<br>のような動きをすると思います<span class="mini">もしかしたら後者の方はシステム的に動かないかもしれないです</span>
+						<br>上から順に解説をしていくと
+						</p>
+						<h5>・format_version</h5>
+						<p>アニコンのバージョンを指定するもの</p>
+						<h5>・animation_controllers</h5>
+						<p>アニコンということを定義するもの</p>
+						<h5>・controller.animation.test</h5>
+						<p>アニコンの名前を定義するもの
+						<br>例えばaとかに変えても動くと思います
+						<br>よく見るのはcontroller.animation.○○という感じで○○だけ変えるのを見ます
+						</p>
+						<h5>・states</h5>
+						<p>状態を指定するもの</p>
+						<h5>・default</h5>
+						<p>デフォルトの状態を指定します</p>
+						<h5>・transitions</h5>
+						<p>実際に感知する内容を書くところになります
+						<br>{ "state": "(query.is_sneaking)" },みたいな感じで書きます
+						<br>この場合だとstateがシフト（query.is_sneaking）、state2が左クリック（variable.attack_time）です
+						<br>このquery.○○やvariable.○○はクエリだっとり変数などと言ったりします<span class="mini">queryはq、variableはvと略すこともできます</span>
+						<br>こいつらがいわゆるシフト感知などができる部分です
+						<br>ほかにもたくさんあって面白いので<a href="https://bedrock.dev/docs/stable/MoLang#List%20of%20Entity%20Queries">こちら</a>をご覧ください
+						<br><br>あとはちょっとわかりにくいので別で説明します
+						<br><script src="https://gist.github.com/texture08/a8a7742739b3c68dfec841127efe86e1.js"></script>
+						<br>上のようなコードがありますよね
+						<br>ここにコマンドを書いていくことになります
+						<br>こいつは少し複雑なので使って覚えるのが一番いいと思います
+						<br>最初のstateから{が伸びて}で終わっている部分を一回見てみてください
+						<br>先ほどみたいにtransitionsがあります
+						<br>こんどは中にstateでもなくstate2でもなくdefaultがあります
+						<br>ここでdefaultに戻すことになるます
+						<br>なので()の前に!がつくことで否定になるので、stateの場合はシフトをやめたときデフォルトに戻すよ！となっています
+						<br>ちなみにstateなんですが上のstatesの中に入れた条件のやつを移動することになるので同じにしてください
+						<br>そしたらコマンド書いていきます
+						<br>コマンドはon_entryまたはon_exitに書いていきます
+						<br>on_entryは動作を開始したときに実行するので、シフトをした瞬間にタグをつけます
+						<br>on_exitは動作をやめたときに実行するので、シフトをやめた瞬間にタグを消します
+						<br>その下に,でつなげてstate2を同じようにして書くとまた別のことができます
+						<br>アニコン自体は書いて覚えるのが一番だと思います
+						<br>試行錯誤しながら試してみてください
+						<br>私にできることがあれば相談に乗るのでTwitterまでお願いします
+						<br><br>では次にplayer.jsonの中身です
+						<br>プレイヤーはできる限りサラッとながすので分からないところがあったらTwitterで質問して下さい
+						<br>プレイヤーに限らずentityに紐づけるときに使うのでアニコン単体だけでは使えないです
+						<br>descriptionのところをいじるのでそちらを見てください
+						<br>既存のentityをいじるなら"is_experimental": falseに,をつけて上のコードのようにいれてあげると紐づきます
+						<br>scriptsはアニコンを指定するための名前を指定するところになります。仮にAとします
+						<br>animationsはアニコン本体を指定するところになります
+						<br>なのでanimationsは"A": "アニコンの名前"で指定します
+						<br>増やすときは,をつけ忘れないように
+						<br>かなりあるあるなので気を付けてください
+						</p>
+						<h2 class="h">終わりに</h2>
+						<p>どうでしたか？
+						<br>アニコンは需要がありそうだったので書いたんですが、記事書くの苦手過ぎますね私
+						<br>分かりにくいのは許してください
+						<br>と、それは置いといて、アニコンは使えるようになるととっても便利なので抑えとくといいと思います
+						<br>私もアニコンに出会って人生が変わりました
+						<br><br>いつものようにサンプルデータは下から
+					<br><a class="button" href="./data/anicon_sample.mcpack" download="data/anicon_sample.mcpack">Download</a>
+						</p>
+		</div>
+		<!--ふっだ-->
+		<div class="footer">
+				<p>しゃー<br> お問い合わせ
+				</p>
+				<p><a href="https://twitter.com/H2DH4K" target="_blank" class="ri">Twitter</a> ID:H2DH4K<br>
+						<a href="https://discord.gg/tk6bJaG" target="_blank" class="ri">Discord</a> ID:シュー#8493<br>
+						<span class="mini">&copy; 2020〜</span></p>
+		</div>
+</body>
+</html>
